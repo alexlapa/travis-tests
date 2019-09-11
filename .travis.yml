@@ -9,6 +9,8 @@ jobs:
   allow_failures:
     - rust: nightly
       stage: foo
+    - rust: nightly
+      stage: bar
 
   include:
     - name: foo

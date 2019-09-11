@@ -8,9 +8,7 @@ install:
 jobs:
   allow_failures:
     - rust: nightly
-      stage:
-        - foo
-        - bar
+      stage: foo
 
   include:
     - name: foo

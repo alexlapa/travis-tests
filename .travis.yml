@@ -7,20 +7,23 @@ install:
 
 jobs:
   allow_failures:
-    - rust: nightly
-      stage: foo
-    - rust: nightly
-      stage: bar
+#    - rust: nightly
+#      stage: foo
+#    - rust: nightly
+#      stage: bar
+    - env: CAN_FAIL=true
 
   include:
     - name: foo
       stage: foo
+      env: CAN_FAIL=true
       rust: nightly
       cache: false
       script: exit 1
 
     - name: bar
       stage: bar
+      env: CAN_FAIL=true
       rust: nightly
       cache: false
       script: exit 1
